@@ -4,7 +4,7 @@ class ShiftSend extends ReturnValue
   onEnvelope: (envelope) =>
     { data } = envelope
 
-    sendMessage = data[0] if data?
-    return sendMessage if sendMessage?
+    return data[0] if data?[0]?
+    return null
 
 module.exports = ShiftSend

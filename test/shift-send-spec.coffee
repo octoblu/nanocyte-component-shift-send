@@ -22,11 +22,11 @@ describe 'ShiftSend', ->
           message: "blah"
           data: []
       it 'shouldnt return the message', ->
-        expect(@sut.onEnvelope(@envelope)).to.be.undefined
+        expect(@sut.onEnvelope(@envelope)).to.be.null
     describe 'when called with a null data property', ->
       beforeEach ->
         @envelope =
           message: "blah"
           data: null
       it 'shouldnt return the message', ->
-        expect(@sut.onEnvelope(@envelope)).to.be.undefined
+        expect(@sut.onEnvelope(@envelope)).to.be.null
